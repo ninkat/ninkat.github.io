@@ -22,7 +22,8 @@ group :jekyll_plugins do
     gem 'mini_racer'
     gem 'unicode_utils'
     gem 'webrick'
-    gem 'sass-embedded', '>= 1.79.3'  # Explicitly add this line
+    gem 'sass-embedded', '>= 1.79.3'  # Ensure this is updated
+    gem 'ffi', '~> 1.15'  # Specify a compatible version
 end
 
 group :other_plugins do
@@ -30,4 +31,5 @@ group :other_plugins do
     gem 'feedjira'
     gem 'httparty'
 end
+
 
