@@ -28,7 +28,8 @@
       "startDate": "2022-09-30",
       "endDate": "",
       "score": "",
-      "courses": []
+      "courses": [],
+      "location": "Winnipeg, Manitoba"
     },
     {
       "institution": "Sisler High School",
@@ -36,7 +37,8 @@
       "startDate": "2018-09",
       "endDate": "2022-06",
       "score": "12",
-      "courses": []
+      "courses": [],
+      "location": "Winnipeg, Manitoba"
     }
   ],
   "awards": [
