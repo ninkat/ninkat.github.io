@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: B.C.Sc Computer Science (Honours) candidate at <a href='https://umanitoba.ca/science/computer-science' target='_blank'>University of Manitoba</a>.
+subtitle: B.C.Sc Computer Science (Honours) candidate at the <a href='https://umanitoba.ca/science/computer-science' target='_blank'>University of Manitoba</a>.
 
 profile:
   align: right
