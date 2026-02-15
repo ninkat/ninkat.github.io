@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="icon"
+      href="{{ site.baseurl }}/favicon.ico?v=1"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ site.baseurl }}/favicon.ico?v=1"
+      type="image/x-icon"
+    />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-E00L9PT3V9"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-E00L9PT3V9');
+    </script>
+    <title>{{ site.name }}</title>
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+    <meta name="author" content="{{ site.name }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ site.baseurl }}/style.css"
+    />
+    <link
+      rel="canonical"
+      href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <table
+      style="
+        width: 100%;
+        max-width: 800px;
+        border: 0px;
+        border-spacing: 0px;
+        border-collapse: separate;
+        margin-right: auto;
+        margin-left: auto;
+      "
+    >
+      <tr style="padding: 0px">
+        <td style="padding: 0px">
+          <table
+            style="
+              width: 100%;
+              border: 0px;
+              border-spacing: 0px;
+              border-collapse: separate;
+              margin-right: auto;
+              margin-left: auto;
+            "
+          >
+            <tr style="padding: 0px">
+              <td style="padding: 2.5%; width: 75%; vertical-align: middle">
+                <h1>Dion Barja</h1>
+                <p>
+                  I am an undergraduate computer science student at the 
+                  <a href="https://umanitoba.ca/computer-science/">University of Manitoba</a>. 
+                  I previously worked at the University of Waterloo HCI Lab, 
+                  advised by <a href="https://mattbrehmer.ca/">Matthew Brehmer</a>, 
+                  and at the University of Manitoba’s Human-Computer Interaction Lab, 
+                  advised by <a href="https://home.cc.umanitoba.ca/~gerhardd/">David Gerhard</a>.
+                </p>
+                <strong>
+                  I will be visiting the University of Toronto this summer, working with <a href="https://fannychevalier.net/">Fanny Chevalier</a>
+                  of the Dynamic Graphics Project!
+                </strong>
+                <p style="text-align: center">
+                  <a target="_blank" href="mailto:barjad@myumanitoba.ca"
+                    >Email</a
+                  >
+                  &nbsp;/&nbsp;
+                  <a href="https://github.com/ninkat">GitHub</a>
+                  &nbsp;/&nbsp;
+                  <a href="https://www.linkedin.com/in/dionbarja">LinkedIn</a>
+                </p>
+              </td>
+              <td style="padding: 2.5%; width: 25%; max-width: 180px">
+                <img
+                  style="width: 100%; max-width: 180px"
+                  alt="profile photo"
+                  src="/tn/images/dionweb-modified.png"
+                />
+              </td>
+            </tr>
+          </table>
+
+          <table
+            style="
+              width: 100%;
+              border: 0px;
+              border-spacing: 0px;
+              border-collapse: separate;
+              margin-right: auto;
+              margin-left: auto;
+            "
+          >
+            <tr>
+              <td style="padding: 2.5%; width: 100%; vertical-align: middle">
+                <h2>Research</h2>
+                <p>
+                  My research focuses on developing and evaluating novel
+                  techniques for interacting with data.
+                </p>
+              </td>
+            </tr>
+          </table>
+          <table
+            style="
+              width: 100%;
+              border: 0px;
+              border-spacing: 0px;
+              border-collapse: separate;
+              margin-right: auto;
+              margin-left: auto;
+            "
+          >
+            {% for post in site.posts %} {% for cat in post.categories %} {% if
+            cat == 'research' %}
+            <tr>
+              <td
+                style="
+                  padding: 2.5%;
+                  width: 25%;
+                  vertical-align: middle;
+                  min-width: 120px;
+                "
+              >
+                <img
+                  src="/tn{{post.image}}"
+                  alt="project image"
+                  style="width: auto; height: auto; max-width: 100%"
+                />
+              </td>
+              <td style="padding: 2.5%; width: 75%; vertical-align: middle">
+                <h3>{{post.title}}</h3>
+                <br />
+                {{post.authors}}
+
+                <br />
+                <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
+                <br />
+                {% assign link_count = 0 %} {% if post.arxiv %}
+                <a href="{{post.arxiv}}">arxiv</a>{% assign link_count =
+                link_count | plus: 1 %} {% endif %} {% if post.paper %} {% if
+                link_count > 0 %} / {% endif %}<a
+                  href="{{ post.paper | prepend: site.baseurl }}"
+                  >paper</a
+                >{% assign link_count = link_count | plus: 1 %} {% endif %} {%
+                if post.video %} {% if link_count > 0 %} / {% endif %}<a
+                  href="{{post.video}}"
+                  >video</a
+                >{% assign link_count = link_count | plus: 1 %} {% endif %} {%
+                if post.code %} {% if link_count > 0 %} / {% endif %}<a
+                  href="{{post.code}}"
+                  >code</a
+                >{% assign link_count = link_count | plus: 1 %} {% endif %} {%
+                if post.poster %} {% if link_count > 0 %} / {% endif %}<a
+                  href="{{post.poster}}"
+                  >poster</a
+                >{% assign link_count = link_count | plus: 1 %} {% endif %} {%
+                if post.slides %} {% if link_count > 0 %} / {% endif %}<a
+                  href="{{post.slides}}"
+                  >slides</a
+                >{% assign link_count = link_count | plus: 1 %} {% endif %} {%
+                if post.website %} {% if link_count > 0 %} / {% endif %}<a
+                  href="{{post.website}}"
+                  >website</a
+                >{% assign link_count = link_count | plus: 1 %} {% endif %} {%
+                if post.youtube %} {% if link_count > 0 %} / {% endif %}<a
+                  href="{{post.youtube}}"
+                  >youtube</a
+                >
+                {% endif %}
+                <p></p>
+                {{ post.excerpt }}
+              </td>
+            </tr>
+            {% endif %} {% endfor %} {% endfor %}
+          </table>
+          <table
+            style="
+              width: 100%;
+              border: 0px;
+              border-spacing: 0px;
+              border-collapse: separate;
+              margin-right: auto;
+              margin-left: auto;
+            "
+          >
+            <tr>
+              <td style="padding: 0px">
+                <br />
+                <p style="text-align: center; font-size: small">
+                  Design and source code from
+                  <a style="font-size: small" href="https://jonbarron.info"
+                    >Jon Barron's website</a
+                  >
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

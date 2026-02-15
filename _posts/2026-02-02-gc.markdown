@@ -1,0 +1,13 @@
+---
+layout: post
+title: 'Glass Chirolytics: Reciprocal Compositing and Shared Gestural Control for Face-to-Face Collaborative Visualization at a Distance'
+date: 2026-02-02 10:21:59 +00:00
+image: /images/bigfig3crop.jpg
+categories: research
+authors: '<strong>Dion Barja</strong> and Matthew Brehmer'
+venue: 'ACM Conference on Human Factors in Computing Systems (CHI)'
+paper: /pdfs/chi26glasschirolytics.pdf
+code: https://github.com/ubixgroup/Glass-Chirolytics
+---
+
+We propose Glass Chirolytics as a novel approach to supporting face-to-face paired analytics conversations between remote participants.
